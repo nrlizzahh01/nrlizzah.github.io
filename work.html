@@ -1,0 +1,76 @@
+<html>
+    <meta charset="utf-8">
+    <title>Service</title>
+    <link rel="stylesheet" href="work.css">
+    <link rel="stylesheet" href="https://www.codeithub.com/responsive-sticky-navigation-bar-html-css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
+
+    <body>
+      <nav class="navbar">
+        <div class="content">
+          <div class="logo">
+            <a href="index.html" class="logo">Personal Website</a>
+          </div>
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fas fa-times"></i>
+            </div>
+                    <li><a href="index.html">Personal Profile</a></li>
+                    <li><a href="work.html">Work Progress</a></li>
+                    <li><a href="photo gallery.html">Photo Gallery</a></li>
+                    <li><a href="About me.html">About Me</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    <section>
+        <img src="images\work progress.png">
+	</section>
+  <border>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3 align="center">Here is my work progress for this semester so far:</h3>
+    <ul id="skill">
+      <li><span class="bar CSC508"></span><h3>CSC508</h3></li>
+      <li><span class="bar CSC574"></span><h3>CSC574</h3></li>
+      <li><span class="bar CSC577"></span><h3>CSC577</h3></li>
+      <li><span class="bar CSC584"></span><h3>CSC584</h3></li>
+    </ul>
+</border>
+	<!--------footer---------->
+	<footer>
+		<p>Copyright© 2021. All Right Reserved. <br>Design by NURUL IZZAH BINTI FAUZI</p>
+	</footer>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    } 
+  </script>
+  
+
+    </body>
+</html>

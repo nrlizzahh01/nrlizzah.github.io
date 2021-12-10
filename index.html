@@ -1,0 +1,122 @@
+<html>
+    <meta charset="utf-8">
+    <title>Personal Profile</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://www.codeithub.com/responsive-sticky-navigation-bar-html-css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <body>
+      <nav class="navbar">
+        <div class="content">
+          <div class="logo">
+            <a href="index.html" class="logo">Personal Website</a>
+          </div>
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fas fa-times"></i>
+            </div>
+                    <li><a href="index.html">Personal Profile</a></li>
+                    <li><a href="work.html">Service</a></li>
+                    <li><a href="photo gallery.html">Photo Gallery</a></li>
+                    <li><a href="About me.html">About Me</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    <section>
+        <img src="images\banner.png">
+	</section>
+	<div class="title">
+        <h1>About me</h1>
+      </div>
+
+      <div class="about-center container">
+        <div class="left">
+          <img src="images\profile.jpg">
+        </div>
+        <div class="right">
+            <table>
+                <tr>
+                <p><td>NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</td>
+                <td>NURUL IZZAH BINTI FAUZI</td></tr></p>
+                &nbsp;
+                </tr>
+                <tr>
+                <p><td>HOME ADDRESS:</td>
+                <td>PM 126,RPT SUNGAI SAM,18000 KUALA KRAI,KELANTAN</td></p>
+                </tr>
+                <tr>
+                <p><td>PHONE NUMBER:</td>
+                <td>014-7390262</td></p>
+                </tr>
+                <tr>
+                <p><td>EMAIL ADDRESS:</td>
+                <td>nurulizzahh101@gmail.com</td></p>
+                </tr>
+            </table>
+        </div>
+      </div>
+      <section class="section theme" id="services">
+        <div class="title">
+          <h1>Academics</h1>
+        </div>
+  
+        <div class="services-center container">
+          <div class="service">
+            <span><i class="fas fa-user-graduate"></i></span>
+            <h2>SPM</h2>
+            <p>
+              (2013-2017)
+            </p>
+          </div>
+  
+          <div class="service" >
+            <span><i class="fas fa-user-graduate"></i></span>
+            <h2>DIPLOMA IN COMPUTER SCIENCE</h2>
+            <p>
+              (2018-2021)
+            </p>
+          </div>
+  
+          <div class="service" >
+            <span><i class="fas fa-user-graduate"></i></span>
+            <h2>DEGREE IN COMPUTER SCIENCE</h2>
+            <p>
+              (2021-IN PROGRESS)
+            </p>
+          </div>
+        </div>
+        &nbsp;
+        &nbsp;
+      </section>
+      <br>
+      <br>
+	<!--------footer---------->
+	<footer>
+		<p>Copyright© 2021. All Right Reserved. <br>Design by NURUL IZZAH BINTI FAUZI</p>
+	</footer>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+    </body>
+</html>
